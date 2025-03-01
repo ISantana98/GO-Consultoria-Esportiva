@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO Consulturia Esportiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particulas"></div>
+
+
+        <nav class="navegacao">
+            <ul class="menu">
+                <li>
+                    <a href="#inicio" class="menu-link">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="menu-link" >Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="#conteudos" class="menu-link" >Conteúdos</a>
+                </li>
+                <li>
+                    <a href="#contate-nos" class="menu-link" >Contate-nos</a>
+                </li>
+            </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+            <img src="/img/Captura de tela 2025-03-01 180123.png" alt="logo GO" class="foto-perfil">
+            <h1><strong>GO CONSULTORIA</strong></h1>
+            <p class="cabecalho-sub-titulo"><strong><i>Desempenho inteligente, resultados vencedores.</i></strong></p>
+        </main>
+
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">Sobre Nós</h2>
+            <div class="sobre-caixa">
+                <p class="sobre-paragrafo">
+                    Na Go Consultoria, ajudamos equipes e atletas a alcançarem seu máximo desempenho através de análises precisas e estratégias baseadas em dados. Com foco em otimizar o desempenho individual e coletivo, oferecemos insights valiosos para melhorar táticas, condicionamento físico e tomadas de decisão.Transformamos dados em estratégias inteligentes, levando seu time a conquistar resultados reais no campo.
+                </p>
+            </div>
+        </section>
+
+    <section id="conteudos" class="conteudos">
+        <h2 class="conteudos-titulo">Conteúdos</h2>
+        <div class="conteudos-caixa">
+
+            <div class="conteudos-card">
+                <img src="/img/reuniões táticas.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                <h3 class="info-conteudos">Consultorias Táticas</h3>
+                <p class="paragrafo-conteudos">Análise detalhada do desempenho do jogador, transformando dados em estratégias para aprimorar resultados no campo.</p>
+                </div>
+                </div>
+
+                <div class="conteudos-card">
+                    <img src="/img/controle de dados.png" alt="Projeto 2" class="projetos-imagem">
+                    <div class="caixa-textos-projetos">
+                    <h3 class="info-conteudos">Highlights</h3>
+                    <p class="paragrafo-conteudos">Vídeos que compilam suas jogadas mais impressionantes e decisivas durante uma partida ou ao longo de uma temporada. Esses vídeos servem para mostrar as habilidades, o estilo de jogo e as conquistas do jogador de maneira condensada, destacando os momentos mais importantes de suas atuações.</p>
+                    </div>
+                    </div>
+
+                    <div class="conteudos-card">
+                        <img src="/img/relatorios.jpg" alt="Projeto 3" class="projetos-imagem">
+                        <div class="caixa-textos-projetos">
+                        <h3 class="info-conteudos">Relatórios Individuais</h3>
+                        <p class="paragrafo-conteudos">Relatórios individuais dos jogadores compilam dados específicos de cada atleta, como estatísticas de desempenho, pontos fortes e áreas de melhoria, oferecendo uma visão clara para otimizar a performance em campo.</p>
+                        </div>
+                        </div>
+            </div>
+            </section>
+
+            <section id="contate-nos" class="contatos">
+                <h2 class="contatos-titulo">Contate-nos</h2>
+
+                <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+                    <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome">
+                    </div>
+                    <div class="grupo-form">
+                    <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+                    </div>
+                </form>
+
+                <div class="contatos-redes">
+                    <!-- Instagram Button -->
+                    <a href="https://www.instagram.com/itaalosantana_/" target="_blank" class="botao-rede social-instagram">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="icone-rede">
+                        Instagram
+                    </a>
+                    
+                    <!-- Email Button -->
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="botao-rede social-email">
+                        <img src="img/gmail-icon.svg" alt="E-mail" class="icone-rede">
+                        E-mail
+                    </a>
+                </div>
+
+
+            </section>
+
+            <script>
+                function enviarWhats(event) {
+                    event.preventDefault()
+                
+                const nome = document.getElementById('nome').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const telefone = '5581993709867'
+
+                const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+                const msgFormatada = encodeURIComponent(texto)
+
+                const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+                console.log (url);
+
+                window.open(url, '_blank')
+                }
+
+            </script>
+
+    
+</body>
+</html>
